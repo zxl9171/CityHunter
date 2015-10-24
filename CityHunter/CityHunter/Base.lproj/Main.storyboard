@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CityHunter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n7c-ae-YzS">
+                                <rect key="frame" x="20" y="83.5" width="560" height="432"/>
+                                <animations/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIx-Fd-Dnh">
+                                <rect key="frame" x="20" y="559" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Role is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-J1-9Od">
+                                <rect key="frame" x="20" y="36" width="560" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nK-3J-BAi">
+                                <rect key="frame" x="20" y="28" width="76" height="38"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k88-2t-SoK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PZY-J1-9Od" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7bS-0l-Z8k"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="PZY-J1-9Od" secondAttribute="leading" id="8W2-4M-A6S"/>
+                            <constraint firstItem="OIx-Fd-Dnh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9xg-ma-rfQ"/>
+                            <constraint firstItem="n7c-ae-YzS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EfJ-cG-iRI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n7c-ae-YzS" secondAttribute="trailing" id="L8K-UA-mJV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="OIx-Fd-Dnh" secondAttribute="leading" id="MQN-iG-Bsd"/>
+                            <constraint firstItem="n7c-ae-YzS" firstAttribute="top" secondItem="PZY-J1-9Od" secondAttribute="bottom" constant="27" id="MaN-lF-OHI"/>
+                            <constraint firstItem="OIx-Fd-Dnh" firstAttribute="top" secondItem="n7c-ae-YzS" secondAttribute="bottom" constant="44" id="YP1-Ic-ntf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PZY-J1-9Od" secondAttribute="trailing" id="eTR-ON-IK3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="n7c-ae-YzS" secondAttribute="leading" id="eaV-gB-s1n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OIx-Fd-Dnh" secondAttribute="trailing" id="g0J-gW-QC1"/>
+                            <constraint firstItem="PZY-J1-9Od" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="oyi-6J-cv8"/>
+                            <constraint firstItem="n7c-ae-YzS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xro-33-LeP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="n7c-ae-YzS" id="l16-Rc-OXP"/>
+                        <outlet property="testLabel" destination="OIx-Fd-Dnh" id="O51-0C-dVV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="324"/>
+        </scene>
+    </scenes>
+</document>
